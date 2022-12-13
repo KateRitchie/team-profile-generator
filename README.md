@@ -37,6 +37,8 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 Tutorial: https://www.youtube.com/watch?v=T-HGdc8L-7w
 
+Tutorial: https://www.youtube.com/watch?v=CWjNefiE47Y
+
 If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
 
 If you followed tutorials, include links to those here as well.

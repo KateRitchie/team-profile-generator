@@ -1,7 +1,7 @@
 // Packages needed for application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateHTML = require('./src/template.js');
+const generateMarkdown = require('./src/generateMarkdown');
 
 //Class imports
 const Engineer = require('./lib/engineer');
@@ -45,7 +45,7 @@ if(role === "Intern") {
 }
 
 //The team array is passed into the generate HTML function and new HTML file created
-/*const HTML = generateHTML(team);
+/*const HTML = generateMarkdown(team);
 fs.writeFileSync("index.html", HTML, (err) => {
     if (err) {
         console.log("Could not create file")
