@@ -1,13 +1,14 @@
 //TODO: JS to format HTML
 // Packages needed for application
 const fs = require('fs');
-const path = require('path');
 
-const footer = `<script src="../index.js"></script>
+let html = '';
+//HTML footer
+let footer = `<script src="../index.js"></script>
 </body>
 </html>`;
-
-const header = `<!DOCTYPE html>
+//HTML header
+let header = `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -55,7 +56,18 @@ const generateMarkdown = (team) => {
       </div>
     </div> 
     </div>`
-   let html = header += card;
+   html = header += card;
 })
 html += footer
+ fs.writeFile('index.html', html, (err) => {
+        if (err) {
+            console.log("Could not create file")
+        } else {
+            console.log("HTML file sucessfully created")
+        }
+    })
+
 }
+
+
+module.exports = generateMarkdown;

@@ -32,6 +32,7 @@ const init = async() => {
 //If none selected, only manager will be in team
 if(role === "None") {
     completeTeam = true;
+    generateMarkdown(team)
 } else {
 //If Engineer or Intern selected, their respective questions will run
 if (role === "Engineer") {
@@ -43,16 +44,6 @@ if(role === "Intern") {
  }
  console.log(team)
 }
-
-//The team array is passed into the generate HTML function and new HTML file created
-/*const HTML = generateMarkdown(team);
-fs.writeFileSync("index.html", HTML, (err) => {
-    if (err) {
-        console.log("Could not create file")
-    } else {
-        console.log("HTML file sucessfully created")
-    }
-})*/
 };
 
 //Make manager profile function
@@ -158,6 +149,23 @@ const makeIntern = async() => {
 
     //Push manager object into team array
     team.push(intern)
+
 };
 init()
+//generateMarkdown()
+//The team array is passed into the generate HTML function and new HTML file created
+//const HTML = generateMarkdown(team);
+/*function writeHTML(html, team) {
+    fs.writeFile('index.html', generateMarkdown(team), (err) => {
+        if (err) {
+            console.log("Could not create file")
+        } else {
+            console.log("HTML file sucessfully created")
+        }
+    })
+}*/
+
+
+
+
 
