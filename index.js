@@ -1,5 +1,5 @@
 // Packages needed for application
-const inquirer = require('inquirer');
+const {prompt} = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./src/generateMarkdown');
 
@@ -27,7 +27,7 @@ const init = async() => {
     ]
 
 //Employee role object
- const {role} = await inquirer.prompt(EQuestion);
+ const {role} = await prompt(EQuestion);
 
 //If none selected, only manager will be in team
 if(role === "None") {
@@ -72,7 +72,7 @@ const makeManager = async() => {
     ]
 
     //Generation of manager question input
-    const managerAnswers = await inquirer.prompt(managerQuestions);
+    const managerAnswers = await prompt(managerQuestions);
 
     //New instance of manager class
     const manager = new Manager(managerAnswers)
@@ -107,7 +107,7 @@ const makeEngineer = async() => {
     ]
 
     //Generation of engineer question input
-    const engineerAnswers = await inquirer.prompt(engineerQuestions);
+    const engineerAnswers = await prompt(engineerQuestions);
 
     //New instance of manager class
     const engineer = new Engineer(engineerAnswers)
@@ -142,7 +142,7 @@ const makeIntern = async() => {
     ]
 
     //Generation of intern question input
-    const internAnswers = await inquirer.prompt(internQuestions);
+    const internAnswers = await prompt(internQuestions);
 
     //New instance of manager class
     const intern = new Intern (internAnswers)
@@ -151,19 +151,9 @@ const makeIntern = async() => {
     team.push(intern)
 
 };
+
 init()
-//generateMarkdown()
-//The team array is passed into the generate HTML function and new HTML file created
-//const HTML = generateMarkdown(team);
-/*function writeHTML(html, team) {
-    fs.writeFile('index.html', generateMarkdown(team), (err) => {
-        if (err) {
-            console.log("Could not create file")
-        } else {
-            console.log("HTML file sucessfully created")
-        }
-    })
-}*/
+
 
 
 
