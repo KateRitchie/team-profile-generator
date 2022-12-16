@@ -43,7 +43,7 @@ const generateMarkdown = (team) => {
             special = `Office number: ${officeNumber}`;
         } else if (role === 'Engineer') {
             github = element.getGithub();
-            special = `GitHub: ${github}<a href="https://github.com/${github}"></a>`;
+            special = `GitHub: <a href="https://github.com/${github}">${github}</a>`;
         } else if (role === 'Intern') {
             school = element.getSchool();
             special = `School: ${school}`;
@@ -57,7 +57,7 @@ const generateMarkdown = (team) => {
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item">ID: ${id} </li>
-          <li class="list-group-item">Email: <a href=${email}></a>${email}</li>
+          <li class="list-group-item">Email: <a href="mailto:${email}">${email}</a></li>
           <li class="list-group-item">${special}</li>
         </ul>
       </div>

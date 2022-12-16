@@ -3,7 +3,7 @@ const Employee = require('../lib/employee');
 const obj = {name: "Nash", id: "12", email:"nash@emal.cm"}
 const person = new Employee(obj)
 
-//Create a function "test" & add in 2 parameters
+//Testing methods and constructors for employee.js
 test("testing name", () => {
     expect(person.getName()).toBe("Nash")
     
