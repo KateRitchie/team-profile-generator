@@ -3,35 +3,22 @@ Team Profile Generator
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
-
-## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
+This application is used to create a team profile through node.js user input.  The input is then displayed in a website using HTML and CSS bootstrap for styling.
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+To use this application
+1) Download Node.js
+2) Download NPM inquirer
+3) Download NPM Jest, if testing is required
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+Application is invoked using node index.js from the intergrated terminal.  Walkthrough video link: 
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+    ![Team Profile](./assets/HTML%20view.PNG)
+    
 
 ## Credits
 
@@ -39,14 +26,10 @@ Tutorial: https://www.youtube.com/watch?v=T-HGdc8L-7w
 
 Tutorial: https://www.youtube.com/watch?v=CWjNefiE47Y
 
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
-
 ## License
 
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
+N/A
 
----
+## Tests
 
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
+Run npm test to run Jest for tests

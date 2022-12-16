@@ -47,7 +47,7 @@ const generateMarkdown = (team) => {
         } else if (role === 'Intern') {
             school = element.getSchool();
             special = `School: ${school}`;
-        }
+        };
     let card = 
     `<div class="col-md-3">    
     <div class="card text-center">
@@ -61,11 +61,11 @@ const generateMarkdown = (team) => {
           <li class="list-group-item">${special}</li>
         </ul>
       </div>
-    </div>` 
+    </div>`;
     
    html = header += card;
 })
-html += footer
+html += footer;
 
 //new HTML file created
  fs.writeFile('./dist/index.html', html, (err) => {
@@ -74,9 +74,9 @@ html += footer
         } else {
             console.log("HTML file sucessfully created")
         }
-    })
+    });
 
-}
+};
 
 
 module.exports = generateMarkdown;

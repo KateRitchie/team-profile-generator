@@ -7,6 +7,7 @@ const generateMarkdown = require('./src/generateMarkdown');
 const Engineer = require('./lib/engineer');
 const Intern = require('./lib/intern');
 const Manager = require('./lib/manager');
+const {clear} = require('console');
 
 //Array needed for answers to questions
 const team = [];
